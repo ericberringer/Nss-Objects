@@ -1,4 +1,4 @@
-console.log("Object Fundamentals Review");
+// console.log("Object Fundamentals Review");
 
 // ! ADD AND COMMIT
 
@@ -57,15 +57,15 @@ const tenAlbum = {
 
 // Dot vs. Bracket Notation - accessing properties
 // TODO: USING DOT NOTATION, access the object properties (artist, title, released) and log the following message to the console using string interpolation: "Pearl Jam's Album Ten was released on 8/27/1991"
-console.log(`${tenAlbum.artist}'s album ${tenAlbum.title} was released on ${tenAlbum.released}.`)
+// console.log(`${tenAlbum.artist}'s album ${tenAlbum.title} was released on ${tenAlbum.released}.`)
 // TODO: Output the same messge to the console using BRACKET NOTATION
-console.log(`${tenAlbum['artist']}'s album ${tenAlbum['title']} was released on ${tenAlbum['released']}.`)
+// console.log(`${tenAlbum['artist']}'s album ${tenAlbum['title']} was released on ${tenAlbum['released']}.`)
 
 // Iterating Object keys/values
 // TODO: Iterate the tenAlbum object and log the key/value pairs to the console using a for/in loop
 // example: "title": "Ten"
-for(const property in tenAlbum) {
-    console.log(`${property}: ${tenAlbum[property]}`)
+for(const object in tenAlbum) {
+    // console.log(`${object}: ${tenAlbum[object]}`)
 }
 // Accessing iterable properties on objects
 // TODO: Iterate the tracks array and output the title of each song and its song length using a for loop of your choosing. The output should look something like this:
@@ -74,19 +74,29 @@ for(const property in tenAlbum) {
     Title: Even Flow - Length: 293
     etc.
 */
-for(const property of tenAlbum.tracks) {
-    console.log(property)
+for(const object of tenAlbum.tracks) {
+    // console.log(`Title: ${object.title} - Length: ${object.length}`)
 }
+
+const songArray = tenAlbum.tracks.map(element => `Title: ${element.title} - Length: ${element.length}`)
+// console.log(songArray)
+// also .forEach() works
+// .map() returns an array
 
 
 // ! ADD AND COMMIT
 
 // OBJECT.keys() / .values() / .entries()
 // TODO: log the keys of the tenAlbum object using Object.keys()
-
+console.log(Object.keys(tenAlbum))
 // TODO: log the values of the tenAlbum object Object.values()
-
+console.log(Object.values(tenAlbum))
 // TODO: log the entries of the tenAlbum object Object.entries()
+for (const [key, value] of Object.entries(tenAlbum)) {
+    console.log(`${key}: ${value}`);
+  }
+
+console.log(Object.entries(tenAlbum))
 
 // TODO: iterate the tenAlbum object and log the key/value pairs to the console using each of the above Object methods:
 // .keys()
