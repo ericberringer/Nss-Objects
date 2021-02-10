@@ -57,8 +57,9 @@ const tenAlbum = {
 
 // Dot vs. Bracket Notation - accessing properties
 // TODO: USING DOT NOTATION, access the object properties (artist, title, released) and log the following message to the console using string interpolation: "Pearl Jam's Album Ten was released on 8/27/1991"
-
+console.log(`${tenAlbum.artist}'s album ${tenAlbum.title} was released on ${tenAlbum.released}.`)
 // TODO: Output the same messge to the console using BRACKET NOTATION
+console.log(`${tenAlbum['artist']}'s album ${tenAlbum['title']} was released on ${tenAlbum['released']}.`)
 
 // Iterating Object keys/values
 // TODO: Iterate the tenAlbum object and log the key/value pairs to the console using a for/in loop
