@@ -64,7 +64,9 @@ console.log(`${tenAlbum['artist']}'s album ${tenAlbum['title']} was released on 
 // Iterating Object keys/values
 // TODO: Iterate the tenAlbum object and log the key/value pairs to the console using a for/in loop
 // example: "title": "Ten"
-
+for(const property in tenAlbum) {
+    console.log(`${property}: ${tenAlbum[property]}`)
+}
 // Accessing iterable properties on objects
 // TODO: Iterate the tracks array and output the title of each song and its song length using a for loop of your choosing. The output should look something like this:
 /*
@@ -72,6 +74,10 @@ console.log(`${tenAlbum['artist']}'s album ${tenAlbum['title']} was released on 
     Title: Even Flow - Length: 293
     etc.
 */
+for(const property of tenAlbum.tracks) {
+    console.log(property)
+}
+
 
 // ! ADD AND COMMIT
 
