@@ -65,7 +65,7 @@ const tenAlbum = {
 // TODO: Iterate the tenAlbum object and log the key/value pairs to the console using a for/in loop
 // example: "title": "Ten"
 for(const object in tenAlbum) {
-    // console.log(`${object}: ${tenAlbum[object]}`)
+    console.log(object, tenAlbum[object])
 }
 // Accessing iterable properties on objects
 // TODO: Iterate the tracks array and output the title of each song and its song length using a for loop of your choosing. The output should look something like this:
@@ -75,7 +75,7 @@ for(const object in tenAlbum) {
     etc.
 */
 for(const object of tenAlbum.tracks) {
-    // console.log(`Title: ${object.title} - Length: ${object.length}`)
+    console.log(`Title: ${object.title} - Length: ${object.length}`)
 }
 
 const songArray = tenAlbum.tracks.map(element => `Title: ${element.title} - Length: ${element.length}`)
@@ -108,14 +108,16 @@ console.log(Object.entries(tenAlbum))
 // USING THE DATA FROM .setlists
 import { setlistsFromAPI } from "./setlists.js";
 // TODO: Log 'setlistsFromAPI' to the console
-
+console.log(setlistsFromAPI)
 // TODO: USING the 'setlistsFromAPI' data, find the event dated 18-08-2018 and store that event object in a variable named 'event'
-
+const event = setlistsFromAPI.setlist[3]
+console.log(event)
 // TODO: log the 'event' object to the console
 
-// TODO: USING DOT OR BRACKET NOTATION AND STRING INTERPOLATION, create a string which includes the name of the band, the venue, and the date of the event and store it in a new variable clled "bandVenueDate"
+// TODO: USING DOT OR BRACKET NOTATION AND STRING INTERPOLATION, create a string which includes the name of the band, the venue, and the date of the event and store it in a new variable called "bandVenueDate"
 // this string should look something like "Pearl Jam - Wrigley Field - 18-08-2018"
-
+const bandVenueDate = `${event.artist.name} - ${event.venue.name} - ${event.eventDate}`
+console.log(bandVenueDate)
 // TODO: log the 'bandVenueDate' string to the console
 
 // TODO: Find the first set of songs of the 'event' object and store it in a variable named 'firstSet'
